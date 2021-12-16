@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/toPromise");
@@ -11,8 +12,8 @@ var ProductService = (function () {
         this.http = http;
         this.configService = configService;
         this.title = 'Product Service';
-        //private productsUrl = 'http://localhost:8081/products'; // URL to web api
-        //private productsUrl = 'http://ec2-34-207-115-234.compute-1.amazonaws.com/products'; // URL to web api
+        // private productsUrl = 'http://localhost:8081/products'; // URL to web api
+        // private productsUrl = 'http://ec2-34-207-115-234.compute-1.amazonaws.com/products'; // URL to web api
         this.productsUrl = '';
         this.headers = new http_1.Headers({ 'Content-Type': 'application/json' });
         this.configService.getConfig(function (configuration) {
@@ -48,12 +49,12 @@ var ProductService = (function () {
         return this.http.delete(url).map(function (res) { return res.json(); }).catch(this.handleError);
     };
     ;
+    ProductService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.Http,
+            config_service_1.ConfigService])
+    ], ProductService);
     return ProductService;
 }());
-ProductService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.Http,
-        config_service_1.ConfigService])
-], ProductService);
 exports.ProductService = ProductService;
 //# sourceMappingURL=product.service.js.map

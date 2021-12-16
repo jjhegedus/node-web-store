@@ -3,4 +3,5 @@
     name: string;
     description: string;
     price: string;
+    mainImageUrl: string;
 }

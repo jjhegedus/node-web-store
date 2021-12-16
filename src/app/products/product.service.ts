@@ -12,8 +12,8 @@ import { Product } from './product';
 @Injectable()
 export class ProductService {
     title = 'Product Service';
-    //private productsUrl = 'http://localhost:8081/products'; // URL to web api
-    //private productsUrl = 'http://ec2-34-207-115-234.compute-1.amazonaws.com/products'; // URL to web api
+    // private productsUrl = 'http://localhost:8081/products'; // URL to web api
+    // private productsUrl = 'http://ec2-34-207-115-234.compute-1.amazonaws.com/products'; // URL to web api
     private productsUrl = '';
     private config: any;
 

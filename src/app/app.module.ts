@@ -1,48 +1,50 @@
 ﻿import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+import {FormsModule} from '@angular/forms';
+import {ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent } from './app.component';
+import { ConfigService } from './config/config.service';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductDetailsComponent } from './product-details/product-details.component';
-import { ShoppingCartComponent } from './cart/cart.component';
 import { ProductService } from './products/product.service';
 import { ProductImageService } from './product-details/product-image.service';
-import { CartService } from './cart/cart.service';
-import { PurchaseComponent } from './purchase/purchase.component';
-import { PurchaseService } from './purchase/purchase.service';
+import { CartService } from '22ndtech-angular-lib';
+import { CheckoutService } from '22ndtech-angular-lib';
 import { ApiService } from './shared';
 import { routing } from './app.routing';
-import { ConfigService } from './config/config.service';
+import {SalesTaxService} from '22ndtech-angular-lib';
+import {LibModule} from '22ndtech-angular-lib';
 
-import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
 
 @NgModule({
     imports: [
         BrowserModule,
         HttpModule,
+        routing,
         FormsModule,
-        routing
+        ReactiveFormsModule,
+        LibModule
     ],
     declarations: [
         AppComponent,
         HomeComponent,
         AboutComponent,
         ProductsComponent,
-        ProductDetailsComponent,
-        ShoppingCartComponent,
-        PurchaseComponent
+        ProductDetailsComponent
     ],
     providers: [
+        ConfigService,
         ApiService,
         ProductService,
         ProductImageService,
         CartService,
-        PurchaseService,
-        ConfigService
+        CheckoutService,
+        SalesTaxService
     ],
     bootstrap: [AppComponent]
 })

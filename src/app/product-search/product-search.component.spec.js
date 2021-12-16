@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var testing_1 = require("@angular/core/testing");
 var product_search_component_1 = require("./product-search.component");
 describe('Product Search Component', function () {

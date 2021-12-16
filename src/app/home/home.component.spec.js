@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 // This shows a different way of testing a component, check about for a simpler one
 var core_1 = require("@angular/core");
 var testing_1 = require("@angular/core/testing");
@@ -18,9 +19,9 @@ describe('Home Component', function () {
 var TestComponent = (function () {
     function TestComponent() {
     }
+    TestComponent = __decorate([
+        core_1.Component({ selector: 'my-test', template: '' })
+    ], TestComponent);
     return TestComponent;
 }());
-TestComponent = __decorate([
-    core_1.Component({ selector: 'my-test', template: '' })
-], TestComponent);
 //# sourceMappingURL=home.component.spec.js.map

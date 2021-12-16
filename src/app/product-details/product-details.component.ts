@@ -10,7 +10,7 @@ import { Product } from '../products/product';
 import { ProductService } from '../products/product.service';
 import { ProductImageService } from './product-image.service';
 import { ProductImage } from './ProductImage';
-import { CartService } from '../cart/cart.service';
+import { CartService } from '22ndtech-angular-lib';
 
 @Component({
     selector: 'my-product-details',
@@ -43,7 +43,7 @@ export class ProductDetailsComponent implements OnInit {
     }
 
     ngOnInit() {
-        //this.product = { id: '1', name: 'Cell Phone', description: 'Android cell phone', price: "399.99" };
+        // this.product = { id: '1', name: 'Cell Phone', description: 'Android cell phone', price: "399.99" };
         console.log('ProductSearchComponent:ngOnInit()');
         this.route.params.switchMap((params: Params) =>
             this.productService.getProduct(params['id']))

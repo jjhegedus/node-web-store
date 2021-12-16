@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var ProductsInMemoryDataService = (function () {
     function ProductsInMemoryDataService() {
     }

@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ProductSearchComponent = (function () {
     function ProductSearchComponent() {
@@ -8,15 +9,15 @@ var ProductSearchComponent = (function () {
     ProductSearchComponent.prototype.ngOnInit = function () {
         console.log('ProductSearchComponent:ngOnInit()');
     };
+    ProductSearchComponent = __decorate([
+        core_1.Component({
+            selector: 'product-search',
+            templateUrl: './product-search.component.html',
+            styleUrls: ['./product-search.component.scss']
+        }),
+        __metadata("design:paramtypes", [])
+    ], ProductSearchComponent);
     return ProductSearchComponent;
 }());
-ProductSearchComponent = __decorate([
-    core_1.Component({
-        selector: 'product-search',
-        templateUrl: './product-search.component.html',
-        styleUrls: ['./product-search.component.scss']
-    }),
-    __metadata("design:paramtypes", [])
-], ProductSearchComponent);
 exports.ProductSearchComponent = ProductSearchComponent;
 //# sourceMappingURL=product-search.component.js.map

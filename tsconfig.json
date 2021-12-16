@@ -2,13 +2,18 @@
   "compilerOptions": {
     "target": "ES5",
     "module": "commonjs",
+    "declaration": false,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
     "sourceMap": true,
     "noEmitHelpers": true,
     "noUnusedLocals": true,
     "noUnusedParameters": true,
-    "lib": ["es2015", "dom"]
+    "skipLibCheck": true,
+    "lib": [
+      "es2015",
+      "dom"
+    ]
   },
   "compileOnSave": false,
   "buildOnSave": false,

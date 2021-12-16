@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
 require("rxjs/add/operator/toPromise");
@@ -48,12 +49,12 @@ var ProductService = (function () {
         return this.http.delete(url).map(function (res) { return res.json(); }).catch(this.handleError);
     };
     ;
+    ProductService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.Http,
+            config_service_1.ConfigService])
+    ], ProductService);
     return ProductService;
 }());
-ProductService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.Http,
-        config_service_1.ConfigService])
-], ProductService);
 exports.ProductService = ProductService;
 //# sourceMappingURL=product.service.spec.js.map
