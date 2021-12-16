@@ -1,0 +1,1 @@
+docker build jeff22ndtech/node-22ndtech:debug .

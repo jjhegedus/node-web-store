@@ -1,0 +1,1 @@
+docker run -it -v ${PWD}:/work -p 5002:5000 --entrypoint /bin/sh jeff22ndtech/node-22ndtech:debug

@@ -1,0 +1,8 @@
+﻿<p>
+  These are the latest products going viral.
+</p>
+<ul class="products">
+  <li (click)="gotoDetail(product.id)" *ngFor="let product of products">
+    <span>{{product.name}}</span>
+  </li>
+</ul>

@@ -1,0 +1,17 @@
+﻿<div class="product-details" *ngIf="product">
+  <h2>{{product.name}}</h2>
+    <img id="mainImage" src="{{mainImageUrl}}" class="img-responsive center-block" alt="{{product.name}}" align="middle" />
+  <div class="product-description">{{product.description}}</div>
+  <div class="price">${{product.price}}</div>
+
+  <ul class="product-images" *ngIf="productImages">
+    <li *ngFor="let productImage of productImages"
+      [class.selected]="productImage === selectedProductImage"
+      (click)="onSelectImage(productImage)">
+      <img id="image-{{productImage._id}}" src="{{awsBucket + productImage.Key}}" class="img-responsive" alt="product image" style="height:50px;width:50px" />
+    </li>
+  </ul>
+
+  <button (click)="goBack()">Back</button>
+  <button (click)="addToCart(product)">Add to Cart</button>
+</div>
